@@ -39,7 +39,7 @@ public class User {
     
     @NotBlank(message = "Confirm Password is required.")
     @Transient
-    private String confirmPassword;
+    private String confirm;
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date createdAt;
@@ -47,21 +47,7 @@ public class User {
     private Date updatedAt;
     // Constructors, Getters, and Setters
     public User() {}
-    public User(Long id,
-			@NotBlank(message = "User Name is required.") @Size(min = 3, max = 30, message = "User Name must be between 3 and 30 characters.") String userName,
-			@NotBlank(message = "Email is required.") @Email(message = "Please enter a valid email.") String email,
-			@NotBlank(message = "Password is required.") @Size(min = 8, message = "Password must be at least 8 characters long.") String password,
-			@NotBlank(message = "Confirm Password is required.") String confirmPassword, Date createdAt,
-			Date updatedAt) {
-		super();
-		this.id = id;
-		this.userName = userName;
-		this.email = email;
-		this.password = password;
-		this.confirmPassword = confirmPassword;
-		this.createdAt = createdAt;
-		this.updatedAt = updatedAt;
-	}
+    
     public Long getId() {
         return id;
     }
@@ -94,12 +80,12 @@ public class User {
         this.password = password;
     }
 
-    public String getConfirmPassword() {
-        return confirmPassword;
+    public String getConfirm() {
+        return confirm;
     }
 
-    public void setConfirmPassword(String confirmPassword) {
-        this.confirmPassword = confirmPassword;
+    public void setConfirmPassword(String confirm) {
+        this.confirm = confirm;
     }
 
 	@PrePersist

@@ -41,9 +41,9 @@
                                 <form:errors path="password" cssClass="text-danger small" />
                             </div>
                             <div class="mb-3">
-                                <label for="confirmPassword" class="form-label">Confirm PW:</label>
-                                <form:password path="confirmPassword" id="confirmPassword" class="form-control" />
-                                <form:errors path="confirmPassword" cssClass="text-danger small" />
+                                <label for="confirm" class="form-label">Confirm PW:</label>
+                                <form:password path="confirm" id="confirm" class="form-control" />
+                                <form:errors path="confirm" cssClass="text-danger small" />
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary w-100">Submit</button>
@@ -61,6 +61,7 @@
                     </div>
                     <div class="card-body">
                         <form:form  action="/login" method="post" modelAttribute="newLogin">
+                        
                             <div class="mb-3">
 								    <form:label path="email" for="emailLogin" cssClass="form-label">Email:</form:label>
 								    <form:input path="email" id="emailLogin" class="form-control" />
