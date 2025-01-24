@@ -84,7 +84,7 @@ public class User {
         return confirm;
     }
 
-    public void setConfirmPassword(String confirm) {
+    public void setConfirm(String confirm) {
         this.confirm = confirm;
     }
 

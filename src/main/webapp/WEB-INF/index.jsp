@@ -41,7 +41,7 @@
                 </div>
                 
                 <div class="mb-3">
-                    <label for="confirm" class="form-label">Confirm Password:</label>
+                    <label for="confirm" class="form-label">Confirm Pw:</label>
                     <form:errors path="confirm" cssClass="text-danger" />
                     <form:password path="confirm" class="form-control" id="confirm" />
                 </div>

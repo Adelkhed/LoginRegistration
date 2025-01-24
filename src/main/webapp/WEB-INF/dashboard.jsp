@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<h1>Welcome, <c:out value="${user.username}"/>!</h1>
+<h1>Welcome, <c:out value="${user.userName}"/>!</h1>
 <p>This is your dashboard. Nothing to see here yet.</p>
 <p><a href="/logout">logout</a></p>
 
